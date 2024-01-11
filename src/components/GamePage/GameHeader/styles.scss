@@ -1,0 +1,104 @@
+@use '@/styles/vars' as v;
+
+:root {
+  --virus-color: #{v.$Cerise};
+  --virus-light-color: #{lighten(v.$Cerise, 20%)};
+  --virus-dark-color: #{darken(v.$Cerise, 20%)};
+  --virus-transparent-color: #{v.$transparent-Cerise};
+
+  --crypto-color: #{v.$Sunglow};
+  --crypto-light-color: #{lighten(v.$Sunglow, 20%)};
+  --crypto-dark-color: #{darken(v.$Sunglow, 20%)};
+  --crypto-transparent-color: #{v.$transparent-Sunglow};
+
+  --update-color: #{v.$DodgerBlue};
+  --update-light-color: #{lighten(v.$DodgerBlue, 20%)};
+  --update-dark-color: #{darken(v.$DodgerBlue, 20%)};
+  --update-transparent-color: #{v.$transparent-DodgerBlue};
+}
+
+
+
+.game_header,
+ul.foe-cards-side,
+.foe-side,
+.player-side {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-side {
+  flex-direction: column;
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+}
+
+.foe-side {
+  flex-direction: column-reverse;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+}
+
+ul.foe-cards-side {
+  position: absolute;
+  left: 44.1rem;
+  top: 1rem;
+}
+
+.foe-cards {
+  width: 5rem;
+  height: 8rem;
+  margin: 0 0.2rem 0;
+  background: url(@/assets/card/deck-back.png) center, linear-gradient(to top,
+      var(--update-dark-color),
+      var(--crypto-dark-color),
+      var(--virus-dark-color));
+  opacity: 0.8;
+  background-size: cover;
+  backface-visibility: hidden;
+  transition: ease-in-out 1s;
+  border-width: 1px;
+  border-style: solid;
+  border-color: v.$Sunglow;
+  border-radius: 10px;
+}
+
+.logo-container {
+  text-align: center;
+  height: 7rem;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 4em;
+  height: 4em;
+  border-radius: 100%;
+  margin: 0.2em;
+
+  $resources: update v.$DodgerBlue,
+  crypto v.$Sunglow,
+  virus v.$Cerise;
+
+  @each $resource in $resources {
+    &-#{nth($resource, 1)} {
+      background-image: url('@/assets/logo/#{nth($resource, 1)}.webp');
+      color: nth($resource, 2);
+      text-shadow: 0 0 5px nth($resource, 2);
+    }
+  }
+
+  h2 {
+    position: absolute;
+    top: 4.5rem;
+    left: 0.5em;
+    font-family: 'Oxanium';
+    font-weight: bold;
+    text-shadow: 2px 0 10px;
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,140 @@
+@use '../../styles/vars' as v;
+
+:root {
+  .virus {
+    --color: #{v.$Cerise};
+    --light-color: #{lighten(v.$Cerise, 20%)};
+    --dark-color: #{darken(v.$Cerise, 20%)};
+    --transparent-color: #{v.$transparent-Cerise};
+    --skew: -2deg;
+  }
+
+  .crypto {
+    --color: #{v.$Sunglow};
+    --light-color: #{lighten(v.$Sunglow, 20%)};
+    --dark-color: #{darken(v.$Sunglow, 20%)};
+    --transparent-color: #{v.$transparent-Sunglow};
+    --skew: 2deg;
+  }
+
+  .purple {
+    --color: #{v.$DarkViolet};
+    --light-color: #{lighten(v.$DarkViolet, 20%)};
+    --dark-color: #{darken(v.$DarkViolet, 20%)};
+    --transparent-color: #{v.$transparent-DarkViolet};
+    --skew: -2deg;
+  }
+
+  .update {
+    --color: #{v.$DodgerBlue};
+    --light-color: #{lighten(v.$DodgerBlue, 20%)};
+    --dark-color: #{darken(v.$DodgerBlue, 20%)};
+    --transparent-color: #{v.$transparent-DodgerBlue};
+    --skew: 1deg;
+  }
+}
+
+button.card {
+  background-image: url(@/assets/card/bg5.png);
+  background-size: cover;
+  margin: 1rem;
+}
+
+.card {
+  all: unset;
+  cursor: pointer;
+  width: 13rem;
+  height: 19rem;
+  text-align: center;
+  font-size: 0.9em;
+  font-family: 'Oxanium';
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+
+    .card_name.blanc, .card_effect.blanc strong {
+      color: white;
+    }
+
+    .card_image {
+      border-radius: 10px;
+      margin: auto;
+      width: 10.5rem;
+      height: 10.5rem;
+    }
+
+    .card_effect {
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+
+
+  .card_cost {
+    float: right;
+    display: flex;
+    justify-content: end;
+    gap: 0.2rem;
+    margin-top: 0.5em;
+
+    &_nb {
+      align-self: center;
+    }
+
+    &_type {
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-right: 0.5em;
+    }
+  }
+
+
+}
+
+// Player resources >= cost of the card
+.playable,
+.unplayable {
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1);
+  }
+}
+
+// Player resources < cost of the card
+.unplayable {
+  opacity: 0.5;
+  // width: 8rem;
+  // height: 12rem;
+}
+
+.glowbox {
+  background-color: var(--transparent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+  box-shadow: 0 0 5px var(--color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color);
+  border-radius: 10px;
+}
+
+.glowtext {
+  color: var(--color);
+  line-height: 1.2em;
+  text-shadow: 0px 0px 4px var(--color);
+}
+
+.glow {
+  &:not(.text) {
+    @extend .glowbox;
+  }
+
+  &.text {
+    @extend .glowtext;
+  }
+}

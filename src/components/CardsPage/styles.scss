@@ -1,0 +1,54 @@
+@use '../../styles/vars' as v;
+
+.card_page_container {
+  padding-top: 2em;
+  background: url(@/assets/background/Background-HomePage.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_page_container h1 {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Oxanium', Courier, sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.card_page_container h2 {
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-family: 'Alphacentauri', Courier, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.crypto_title{
+  color: v.$Sunglow;
+  text-shadow: 2px 2px 2px black;
+}
+
+.update_title{
+  color: v.$DodgerBlue;
+  text-shadow: 2px 2px 2px black;
+}
+
+.virus_title{
+  color: v.$Cerise;
+  text-shadow: 2px 2px 2px black;
+}
+
+.card_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card_list li:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}

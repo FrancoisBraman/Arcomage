@@ -1,0 +1,73 @@
+@use '../../../styles/vars' as v;
+
+
+
+.title {
+  z-index: 2;
+  font-size: 14rem;
+  position: absolute;
+  color: v.$Sunglow;
+  top: 4rem;
+  font-family: 'Alphacentauri';
+  text-shadow: 1px 1px 2px v.$Cerise, 0 0 1em v.$DarkViolet, 0 0 0.2em v.$DodgerBlue;
+  text-orientation: sideways-right;
+  letter-spacing: 3rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  -webkit-text-stroke: 5px rgb(5, 85, 151);
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+p.description {
+  z-index: 1;
+  text-align: center;
+  color: v.$Sunglow;
+  font-family: 'Oxanium';
+  font-weight: bold;
+  -webkit-text-stroke: 2px v.$DarkViolet;
+  opacity: 80%;
+}
+
+.board {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  transform: perspective(300px) rotateX(25deg);
+  transform-origin: 50% 100%;
+  text-align: justify;
+  position: absolute;
+  margin-left: -9em;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 350%;
+  height: 50em;
+  width: 18em;
+  bottom: 27rem;
+  left: 50%;
+}
+
+.board:after {
+  position: absolute;
+  content: ' ';
+  bottom: 60%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.content {
+  animation: scroll 200s linear 1s;
+  position: absolute;
+  top: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: -170%;
+  }
+}

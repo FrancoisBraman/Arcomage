@@ -1,0 +1,38 @@
+@use 'reset';
+
+body {
+  height: 100vh;
+}
+
+//App Title Font
+@font-face {
+  font-family: 'CyberwayRiders';
+  src: url(../assets/fonts/CyberwayRiders-lg97d.ttf);
+}
+
+//App Title Font
+@font-face {
+  font-family: 'Alphacentauri';
+  src: url(../assets/fonts/Alphacentauri-MVY4p.ttf);
+}
+
+//light Font
+@font-face {
+  font-family: 'Oxanium';
+  src: url(../assets/fonts/oxanium/OxaniumLight-qZZK0.ttf);
+  font-weight: lighter;
+}
+
+//Regular Font
+@font-face {
+  font-family: 'Oxanium';
+  src: url(../assets/fonts/oxanium/OxaniumRegular-JRRnn.ttf);
+  font-weight: normal;
+}
+
+//Bold Font
+@font-face {
+  font-family: 'Oxanium';
+  src: url(../assets/fonts/oxanium/OxaniumBold-p77oZ.ttf);
+  font-weight: bold;
+}

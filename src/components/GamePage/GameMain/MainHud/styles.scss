@@ -1,0 +1,297 @@
+@use '@/styles/vars' as v;
+$color-update: v.$DodgerBlue;
+$color-crypto: v.$Sunglow;
+$color-virus: v.$Cerise;
+
+
+$porcent-update: 0;
+$porcent-crypto: 0;
+$porcent-virus: 0;
+
+.main_hud {
+    height: 100%;
+    width: 100%;
+    background-image: url(@/assets/hud/playerMainhud.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2rem 0 2rem 0;
+    margin-bottom: 0.5rem;
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
+    height: 85%;
+    width: 85%;
+    margin-right: 3rem;
+
+    .player-name {
+        font-family: 'CyberwayRiders';
+        font-size: 3rem;
+        position: absolute;
+        top: 11rem;
+        left: 14rem;
+        margin-right: 1em;
+        animation: playerFlicker 1.5s infinite alternate;
+        text-shadow:
+            0 0 7px v.$DodgerBlue,
+            0 0 10px v.$DodgerBlue,
+            0 0 21px v.$DodgerBlue,
+            0 0 42px v.$DodgerBlue,
+            0 0 82px v.$DodgerBlue,
+            0 0 92px v.$DodgerBlue,
+            0 0 102px v.$DodgerBlue,
+            0 0 151px v.$DodgerBlue;
+
+        @keyframes playerFlicker {
+
+            0%,
+            18%,
+            22%,
+            25%,
+            53%,
+            57%,
+            100% {
+
+                text-shadow:
+                    0 0 4px v.$DodgerBlue,
+                    0 0 11px v.$DodgerBlue,
+                    0 0 19px v.$DodgerBlue,
+                    0 0 40px v.$DodgerBlue,
+                    0 0 80px v.$DodgerBlue,
+                    0 0 90px v.$DodgerBlue,
+                    0 0 100px v.$DodgerBlue,
+                    0 0 150px v.$DodgerBlue;
+            }
+
+            20%,
+            24%,
+            55% {
+                text-shadow: none;
+            }
+        }
+    }
+
+    .cpu {
+        position: absolute;
+        top: 11rem;
+        left: 91.5rem;
+        font-family: 'CyberwayRiders';
+        font-size: 3rem;
+        margin-left: 1em;
+        animation: foeFlicker 1.7s infinite alternate;
+        text-shadow:
+            0 0 7px v.$Cerise,
+            0 0 10px v.$Cerise,
+            0 0 21px v.$Cerise,
+            0 0 42px v.$Cerise,
+            0 0 82px v.$Cerise,
+            0 0 92px v.$Cerise,
+            0 0 102px v.$Cerise,
+            0 0 151px v.$Cerise;
+
+        @keyframes foeFlicker {
+
+            0%,
+            18%,
+            22%,
+            25%,
+            53%,
+            57%,
+            100% {
+
+                text-shadow:
+                    0 0 4px v.$Cerise,
+                    0 0 11px v.$Cerise,
+                    0 0 19px v.$Cerise,
+                    0 0 40px v.$Cerise,
+                    0 0 80px v.$Cerise,
+                    0 0 90px v.$Cerise,
+                    0 0 100px v.$Cerise,
+                    0 0 150px v.$Cerise;
+            }
+
+            20%,
+            24%,
+            55% {
+                text-shadow: none;
+            }
+        }
+
+    }
+}
+
+.container__progressbars {
+
+    display: flex;
+    align-items: center;
+}
+
+.progressbar {
+
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    transform: rotate(-90deg);
+
+}
+
+.update_resource {
+
+    background-image: url('@/assets/logo/update.webp');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(360deg);
+}
+
+.crypto_resource {
+
+    background-image: url('@/assets/logo/crypto.webp');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(360deg);
+}
+
+.virus_resource {
+
+    background-image: url('@/assets/logo/virus.webp');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(360deg);
+
+}
+
+.progressbar__svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.progressbar__svg-circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke: hsl(0, 0%, 100%);
+    stroke-linecap: round;
+    transform: translate(0.3px, 0.3px); // stroke-width / 2
+
+}
+
+.shadow {
+    &-update_resource {
+        filter: drop-shadow(0 0 0.3rem $color-update);
+    }
+
+    &-crypto_resource {
+        filter: drop-shadow(0 0 0.3rem $color-crypto);
+    }
+
+    &-virus_resource {
+        filter: drop-shadow(0 0 0.3rem $color-virus);
+    }
+}
+
+.circle {
+    &-update_resource {
+        animation: anim_circle-update 1s ease-in-out forwards;
+    }
+
+    &-crypto_resource {
+        animation: anim_circle-crypto 1s ease-in-out forwards;
+    }
+
+    &-virus_resource {
+        animation: anim_circle-virus 1s ease-in-out forwards;
+    }
+}
+
+.progressbar__text {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    padding: 0.25em 0.5em;
+    color: hsl(0, 9%, 98%);
+    font-family: 'Oxanium', Helvetica, sans-serif;
+    border-radius: 0.25em;
+    transform: translate(-50%, -50%) rotate(360deg);
+}
+
+//  @keyframes
+
+@keyframes anim_circle-update {
+    to {
+        stroke-dashoffset: strokeDashoffset($porcent-update);
+    }
+}
+
+@keyframes anim_circle-crypto {
+    to {
+        stroke-dashoffset: strokeDashoffset($porcent-crypto);
+    }
+}
+
+@keyframes anim_circle-virus {
+    to {
+        stroke-dashoffset: strokeDashoffset($porcent-virus);
+    }
+}
+
+//!Datacenter bar
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.progress-bar__container {
+    width: 50%;
+    height: 2rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    will-change: transform;
+    box-shadow: 0 0 5px v.$DodgerBlue;
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    position: absolute;
+    height: 100%;
+    content: "";
+    background-color: v.$DodgerBlue;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'sans-serif';
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.data_center_description {
+    font-family: 'Oxanium';
+    font-size: 1.2rem;
+}
+
+.progress-bar__text {
+    display: none;
+}

@@ -1,0 +1,118 @@
+@use '../../../styles/vars' as v;
+
+:root {
+    --virus-color: #{v.$Cerise};
+    --virus-light-color: #{lighten(v.$Cerise, 20%)};
+    --virus-dark-color: #{darken(v.$Cerise, 20%)};
+    --virus-transparent-color: #{v.$transparent-Cerise};
+
+    --crypto-color: #{v.$Sunglow};
+    --crypto-light-color: #{lighten(v.$Sunglow, 20%)};
+    --crypto-dark-color: #{darken(v.$Sunglow, 20%)};
+    --crypto-transparent-color: #{v.$transparent-Sunglow};
+
+    --update-color: #{v.$DodgerBlue};
+    --update-light-color: #{lighten(v.$DodgerBlue, 20%)};
+    --update-dark-color: #{darken(v.$DodgerBlue, 20%)};
+    --update-transparent-color: #{v.$transparent-DodgerBlue};
+}
+
+.game_main {
+    display: flex;
+    justify-content: space-between; //! arroud sur le fichier de François
+
+    .game_table {
+        // height: 200px;
+        // width: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+
+        .deck-container {
+            position: relative;
+            height: 500px;
+            width: 300px;
+        }
+
+        .deck-transform {
+            transform: rotateY(180deg);
+            transition: ease-in-out 1s;
+        }
+
+        .deck {
+            position: absolute;
+            top: 11rem;
+            left: 5.5rem;
+            height: 100%;
+            width: 100%;
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            padding: 0;
+            border: none;
+            width: 13rem;
+            height: 19rem;
+            background: url(@/assets/card/bg5.png);
+        }
+
+        .deck-front {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            backface-visibility: hidden;
+        }
+
+        .deck-back {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: url(@/assets/card/deck-back.png) center;
+            background-size: cover;
+            backface-visibility: hidden;
+            transition: ease-in-out 1s;
+            border-width: 1px;
+            border-style: solid;
+            border-color: v.$Sunglow;
+            border-radius: 10px;
+        }
+
+        .deck-back::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top,
+                    var(--update-transparent-color),
+                    var(--virus-transparent-color),
+                    var(--crypto-transparent-color));
+            border-radius: 10px;
+        }
+    }
+}
+
+.stats_display {
+    display: flex;
+    flex-direction: column;
+
+    .damage {
+        font-size: 2rem;
+        opacity: 0;
+        transition: font-size 0.2s ease-in-out, opacity 0.2s ease-in-out;
+        color: v.$Cerise;
+    }
+
+    .heal {
+        font-size: 2rem;
+        opacity: 0;
+        transition: font-size 0.2s ease-in-out, opacity 0.2s ease-in-out;
+        color: v.$Sunglow;
+    }
+
+    .damage.show,
+    .heal.show {
+        font-family: 'Oxanium';
+        font-size: 7rem;
+        opacity: 1;
+    }
+}

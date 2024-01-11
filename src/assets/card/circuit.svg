@@ -1,0 +1,93 @@
+<svg width="800px" height="800px" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="elements" class="path" stroke="#F95C3C" stroke-width="4" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke-opacity="1" stroke-dasharray="30,500,50,500" stroke-dashoffset="2000">
+      <g id="bottom" transform="translate(239.000000, 488.000000)">
+        <polyline points="109 224 89 224 65 200 65 36 57 28 57 0"></polyline>
+        <polyline points="21 116 20.9843851 68.0156352 8.96878046 56.0000305 8.96878046 40.0312195 25 24 25 0"></polyline>
+        <polyline points="0 33 17 16 17 0"></polyline>
+        <polyline points="20 44 20 41 33 28 33 0"></polyline>
+        <polyline points="33 60 33 40 41 32 41 0"></polyline>
+        <polyline points="109 232 84 232 57 205 57 41 49 33 49 0"></polyline>
+      </g>
+      <g id="right" transform="translate(300.000000, 411.000000)">
+        <polyline points="0 65 60 65 76.0312195 48.9687805 124 48.9687805 171.000005 48.9687805"></polyline>
+        <polyline points="0 73 91 73 95 69 164 69 168 65 176 65 220 109 256 109"></polyline>
+        <polyline points="0 57 56 57 72 41 76 41 80 37"></polyline>
+        <polyline points="0 49 52 49 84 17"></polyline>
+        <polyline points="0 41 47 41 76 12 76 9 85 0"></polyline>
+        <polyline points="0 33 16 33 20 29 36 29"></polyline>
+      </g>
+      <g id="left" transform="translate(0.000000, 127.000000)">
+        <polyline points="224 305 224 317 240 333 252 333"></polyline>
+        <polyline points="244 269 244 313 248 317 252 317"></polyline>
+        <polyline points="0 29 76 29 120 73 120 189 156 225 176 225 208 257 208 273 196 285 196 325 228 357 252 357"></polyline>
+        <polyline points="136 0 136 9 152 25 152 165 232 245 232 281 236 285 236 317 244 325 252 325"></polyline>
+        <polyline points="0 21 79.9895845 20.9895845 128 69 128 185 144 201 164 201 216 253 216 277 204 289.285714 204 321.571429 231.428571 349 252 349"></polyline>
+        <polyline points="0 5 88 5 144 61 144 169 224 249 224 281 212 293 212 317 236 341 252 341"></polyline>
+      </g>
+      <g id="top" transform="translate(148.000000, 104.000000)">
+        <polyline points="108 336 108 280 12 184 12 44 0 32 0 11"></polyline>
+        <polyline points="116 336 116 276 20 180 20 40 12 32 12 23"></polyline>
+        <polyline points="124 336 124 272 28 176 28 36 24 32 24 12"></polyline>
+        <polyline points="132 335 132 268 36 172 36 4 36 0"></polyline>
+        <polyline points="140 336 140 248 156 232 156 223"></polyline>
+        <polyline points="148 336 148 252 168 232 168 212"></polyline>
+      </g>
+      <g id="top-right" transform="translate(732.000000, 119.000000)">
+        <polyline points="0 0 4 0 17 13 68 13"></polyline>
+        <polyline points="0 32 17 32 20 29 68 29"></polyline>
+        <polyline points="0 48 12 48 23 37 68 37"></polyline>
+      </g>
+    </g>
+    <g id="elements-bg" transform="translate(0.000000, 104.000000)" stroke="#F95C3C" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="316" cy="208" r="4"></circle>
+      <circle cx="304" cy="219" r="4"></circle>
+      <circle cx="560" cy="416" r="4"></circle>
+      <circle cx="475" cy="356" r="4"></circle>
+      <circle cx="136" cy="19" r="4"></circle>
+      <circle cx="148" cy="7" r="4"></circle>
+      <circle cx="160" cy="19" r="4"></circle>
+      <circle cx="172" cy="7" r="4"></circle>
+      <circle cx="383" cy="340" r="4"></circle>
+      <circle cx="387" cy="320" r="4"></circle>
+      <circle cx="388" cy="304" r="4"></circle>
+      <circle cx="340" cy="336" r="4"></circle>
+      <circle cx="236" cy="420" r="4"></circle>
+      <circle cx="272" cy="448" r="4"></circle>
+      <circle cx="284" cy="436" r="4"></circle>
+      <circle cx="259" cy="432" r="4"></circle>
+      <circle cx="728" cy="15" r="4"></circle>
+      <circle cx="728" cy="47" r="4"></circle>
+      <circle cx="728" cy="63" r="4"></circle>
+      <circle cx="244" cy="288" r="4"></circle>
+      <circle cx="224" cy="324" r="4"></circle>
+      <rect x="252" y="336" width="48" height="48" rx="4"></rect>
+      <polyline points="348 608 328 608 304 584 304 420 296 412 296 384"></polyline>
+      <polyline points="260 500 259.984385 452.015635 247.96878 440.000031 247.96878 424.03122 264 408 264 384"></polyline>
+      <polyline points="239 417 256 400 256 384"></polyline>
+      <polyline points="259 428 259 425 272 412 272 384"></polyline>
+      <polyline points="272 444 272 424 280 416 280 384"></polyline>
+      <polyline points="348 616 323 616 296 589 296 425 288 417 288 384"></polyline>
+      <polyline points="300 372 360 372 376.03122 355.96878 424 355.96878 471.000005 355.96878"></polyline>
+      <polyline points="300 380 391 380 395 376 464 376 468 372 476 372 520 416 556 416"></polyline>
+      <polyline points="300 364 356 364 372 348 376 348 380 344"></polyline>
+      <polyline points="300 356 352 356 384 324"></polyline>
+      <polyline points="300 348 347 348 376 319 376 316 385 307"></polyline>
+      <polyline points="300 340 316 340 320 336 336 336"></polyline>
+      <polyline points="224 328 224 340 240 356 252 356"></polyline>
+      <polyline points="244 292 244 336 248 340 252 340"></polyline>
+      <polyline points="0 52 76 52 120 96 120 212 156 248 176 248 208 280 208 296 196 308 196 348 228 380 252 380"></polyline>
+      <polyline points="136 23 136 32 152 48 152 188 232 268 232 304 236 308 236 340 244 348 252 348"></polyline>
+      <polyline points="0 44 79.9895845 43.9895845 128 92 128 208 144 224 164 224 216 276 216 300 204 312.285714 204 344.571429 231.428571 372 252 372"></polyline>
+      <polyline points="0 28 88 28 144 84 144 192 224 272 224 304 212 316 212 340 236 364 252 364"></polyline>
+      <polyline points="256 336 256 280 160 184 160 44 148 32 148 11"></polyline>
+      <polyline points="264 336 264 276 168 180 168 40 160 32 160 23"></polyline>
+      <polyline points="272 336 272 272 176 176 176 36 172 32 172 12"></polyline>
+      <polyline points="280 335 280 268 184 172 184 4 184 0"></polyline>
+      <polyline points="288 336 288 248 304 232 304 223"></polyline>
+      <polyline points="296 336 296 252 316 232 316 212"></polyline>
+      <polyline points="732 15 736 15 749 28 800 28"></polyline>
+      <polyline points="732 47 749 47 752 44 800 44"></polyline>
+      <polyline points="732 63 744 63 755 52 800 52"></polyline>
+    </g>
+  </g>
+</svg>

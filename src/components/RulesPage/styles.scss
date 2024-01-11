@@ -1,0 +1,115 @@
+@use '../../styles/vars' as v;
+
+.back-container {
+  background-color: v.$Sunglow;
+}
+
+.rules-container {
+  background: url(../../assets/background/banner-1711945_1920-compressed.jpg);
+  background-position: center;
+  margin: auto;
+  padding: 2rem;
+  max-width: 70%;
+  border: solid 8px black;
+  border-radius: 0 25px 0 25px;
+}
+
+h1.rules-title {
+  font-family: 'Alphacentauri', Courier, sans-serif;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  color: v.$Sunglow;
+  -webkit-text-stroke: 2px v.$DodgerBlue;
+  border: solid 5px black;
+  border-radius: 10px 0 0 10px;
+  padding: 0.5rem 2rem;
+  background-color: v.$Cerise;
+}
+
+h2.rules-subtitle {
+  font-family: 'Oxanium', Courier, sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  color: v.$Sunglow;
+  -webkit-text-stroke: 2px v.$DarkViolet;
+  padding: 2rem 0 0 0;
+}
+
+.rules {
+  text-align: left;
+  color: rgba(29, 28, 28, 0.97);
+  font-weight: bold;
+  line-height: 2.5rem;
+  font-family: 'Oxanium', Courier, sans-serif;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.rules-lists {
+  list-style-type: disc;
+  padding: 0.1rem;
+}
+
+@media (max-width: 1024px) {
+  .rules-container {
+    max-width: 80%;
+  }
+
+  h1.rules-title {
+    font-size: 3rem;
+    left: 1rem;
+  }
+
+  h2.rules-subtitle {
+    font-size: 2.5rem;
+  }
+
+  .rules {
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .rules-container {
+    max-width: 90%;
+  }
+  
+  h1.rules-title {
+    font-size: 2.5rem;
+    left: 10%;
+  }
+  
+  h2.rules-subtitle {
+    font-size: 2.5rem;
+  }
+  
+  .rules {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rules-container {
+    max-width: 95%;
+  }
+  
+  h1.rules-title {
+    font-size: 2rem;
+  }
+  
+  h2.rules-subtitle {
+    font-size: 2rem;
+  }
+  
+  .rules {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+  }
+
+  .rules-lists {
+    padding: 0.2rem;
+  }
+}

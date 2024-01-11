@@ -1,0 +1,11 @@
+@use '../../styles/vars' as v;
+
+.homepage_container {
+    height: 100vh;
+    background-image: url(../../assets/background/Background-HomePage.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: v.$Cerise;  
+}

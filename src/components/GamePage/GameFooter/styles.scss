@@ -1,0 +1,56 @@
+@use '../../../styles/vars'as v;
+
+:root {
+  .virus {
+    --color: #{v.$Cerise};
+    --light-color: #{lighten(v.$Cerise, 20%)};
+    --dark-color: #{darken(v.$Cerise, 20%)};
+    --transparent-color: #{v.$transparent-Cerise};
+    --skew: -2deg;
+  }
+
+  .crypto {
+    --color: #{v.$Sunglow};
+    --light-color: #{lighten(v.$Sunglow, 20%)};
+    --dark-color: #{darken(v.$Sunglow, 20%)};
+    --transparent-color: #{v.$transparent-Sunglow};
+    --skew: 2deg;
+  }
+
+  .purple {
+    --color: #{v.$DarkViolet};
+    --light-color: #{lighten(v.$DarkViolet, 20%)};
+    --dark-color: #{darken(v.$DarkViolet, 20%)};
+    --transparent-color: #{v.$transparent-DarkViolet};
+    --skew: -2deg;
+  }
+
+  .update {
+    --color: #{v.$DodgerBlue};
+    --light-color: #{lighten(v.$DodgerBlue, 20%)};
+    --dark-color: #{darken(v.$DodgerBlue, 20%)};
+    --transparent-color: #{v.$transparent-DodgerBlue};
+    --skew: 1deg;
+  }
+}
+
+
+.player_card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  scale: 3;
+}
+
+.glowbox {
+  background-color: var(--transparent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+  box-shadow: 0 0 5px var(--color);
+  border-width: 1px;
+  border-style: solid;
+  border-color:rebeccapurple;
+  border-radius: 10px;
+}
